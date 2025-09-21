@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+
+    <title>Document</title>
+    <style>
+            *{
+                margin: 0;
+                font-family: vazirmatn;
+            }
+            nav{
+                background-color: #222;
+            }
+            ul{
+                display: flex;
+                flex: 1;
+                justify-content: center;
+                list-style: none;
+            }
+            a{
+                text-decoration: none;
+                display: block;
+                padding: 10px 30px;
+                color: #fff;
+                text-align: center;
+            }
+           li:hover{
+                background-color: red;
+            }
+            @media(max-width:700px){
+                ul{
+                    flex-direction: column;
+                }
+            }
+    </style>
+</head>
+<body>
+    <nav>
+            <ul id="menu">
+               
+            </ul>
+    </nav>
+
+    <script>
+        let menuItems=["خانه", "سرویس ها","درباره ما","تماس با ما"];
+        let navSection=document.getElementById("menu");
+        let items="";
+        for (let index = 0; index < menuItems.length; index++) {
+           items+=`<li><a href="#">${menuItems[index]}</a></li>`;
+            
+        }
+        navSection.innerHTML=items;
+
+    </script>
+</body>
+</html>
